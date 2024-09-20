@@ -11,8 +11,8 @@ intents.message_content = True
 
 bot = discord.Bot(intents=intents)
 
-wb_url_jsu24 = "https://discord.com/api/webhooks/1286643148050796626/KxSW9c8FfibD5Ug5-iC71kjN_Cukrl9VW6IWYYSNPUFLnxmhNq7dxiu2D_NCjtPJLN1r"
-wb_url_feu24 = "https://discord.com/api/webhooks/1286645423393472607/TQ9f0anmU9KwSc-GULslCD9GIq-eizcUbQwvu_MxlqshBXkzXZURUjM3rownR0UrSPaK"
+wb_url_jsu24 = str(os.getenv("WH-JSU24"))
+wb_url_feu24 = str(os.getenv("WH-FEU24"))
 
 @bot.event
 async def on_ready():
