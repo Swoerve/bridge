@@ -5,12 +5,17 @@ from aiohttp import ClientSession
 
 load_dotenv() # load all the variables from the env file
 
+
+# Set up discord bot intents
 intents = discord.Intents(messages=True, guilds=True)
 intents.reactions = True
 intents.message_content = True
 
+# Initialize bot object
 bot = discord.Bot(intents=intents)
 
+
+# Get the webhooks from env
 wb_url_jsu24 = str(os.getenv("WH-JSU24"))
 wb_url_feu24 = str(os.getenv("WH-FEU24"))
 
